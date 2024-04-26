@@ -1,5 +1,6 @@
 package android.challenge.view.adapter
 
+
 import android.challenge.R
 import android.challenge.model.Activity
 import android.view.LayoutInflater

@@ -3,7 +3,6 @@ package android.challenge.model
 data class LevelModel(
     val levels: List<Level>?
 )
-
 data class Level(
     val activities: List<Activity>?,
     val description: String?,

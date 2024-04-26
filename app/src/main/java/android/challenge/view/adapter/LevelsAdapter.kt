@@ -1,8 +1,7 @@
 package android.challenge.view.adapter
 
-import android.annotation.SuppressLint
+
 import android.challenge.R
-import android.challenge.model.Level
 import android.challenge.model.LevelModel
 import android.view.LayoutInflater
 import android.view.View
@@ -11,7 +10,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class LevelsAdapter(private val levels: LevelModel) :
@@ -27,12 +25,9 @@ class LevelsAdapter(private val levels: LevelModel) :
         val recyclerViewActivities: RecyclerView =
             itemView.findViewById(R.id.recyclerViewActivities)
     }
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LevelViewHolder {
         val itemView =
             LayoutInflater.from(parent.context).inflate(R.layout.item_level, parent, false)
-
         return LevelViewHolder(itemView)
     }
 
