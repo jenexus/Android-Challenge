@@ -51,4 +51,6 @@ dependencies {
 
     implementation ("com.google.code.gson:gson:2.8.8")
     implementation ("androidx.recyclerview:recyclerview:1.3.0")
+    implementation("io.insert-koin:koin-android:3.5.6")
+
 }
