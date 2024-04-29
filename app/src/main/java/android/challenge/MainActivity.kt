@@ -1,12 +1,15 @@
 package android.challenge
 
 import android.challenge.databinding.ActivityMainBinding
+import android.challenge.utilities.GLOBAL_TAG
 import android.challenge.utilities.JSON_FILE_NAME
 import android.challenge.view.adapter.DaysAdapter
 import android.challenge.view.adapter.LevelsAdapter
 import android.challenge.viewmodel.MainViewModel
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

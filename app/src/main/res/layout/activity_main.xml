@@ -25,8 +25,8 @@
             android:layout_marginRight="15dp">
 
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:src="@drawable/journey_icon" />
 
             <LinearLayout
@@ -40,6 +40,7 @@
                     android:layout_height="wrap_content"
                     android:text="Taming temper"
                     android:textSize="15sp"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
                 <androidx.appcompat.widget.LinearLayoutCompat
@@ -143,7 +144,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
-            android:text="Journey"
+            android:text="@string/journey"
             android:textColor="@color/purple"
             android:textSize="12sp" />
 

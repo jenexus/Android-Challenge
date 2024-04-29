@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class LevelsAdapter(private val levels: LevelModel) :
     RecyclerView.Adapter<LevelsAdapter.LevelViewHolder>() {
-    class LevelViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class LevelViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val txtTitle: TextView = itemView.findViewById(R.id.txtTitle)
         val txtLevel: TextView = itemView.findViewById(R.id.txtLevel)
         val imgLevel: ImageView = itemView.findViewById(R.id.imgLevel)
@@ -24,7 +24,10 @@ class LevelsAdapter(private val levels: LevelModel) :
         val txtDescription: TextView = itemView.findViewById(R.id.txtDescription)
         val recyclerViewActivities: RecyclerView =
             itemView.findViewById(R.id.recyclerViewActivities)
+
+
     }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LevelViewHolder {
         val itemView =
             LayoutInflater.from(parent.context).inflate(R.layout.item_level, parent, false)
@@ -34,11 +37,11 @@ class LevelsAdapter(private val levels: LevelModel) :
     override fun getItemCount(): Int {
         val availableLevel = levels?.levels?.count { it.state == "AVAILABLE" }
 
-        if(availableLevel == levels.levels?.size){
+        if (availableLevel == levels.levels?.size) {
             return levels.levels?.size!!
         }
         if (availableLevel != null) {
-            return availableLevel+1
+            return availableLevel + 1
         }
         return 1
     }
@@ -46,7 +49,7 @@ class LevelsAdapter(private val levels: LevelModel) :
     override fun onBindViewHolder(holder: LevelViewHolder, position: Int) {
         val currentLevel = levels.levels?.get(position)
 
-        if(currentLevel?.state == "AVAILABLE"){
+        if (currentLevel?.state == "AVAILABLE") {
             holder.txtTitle.text = currentLevel?.title
             holder.txtDescription.text = currentLevel?.description
             holder.txtLevel.text = "Level ${currentLevel?.level}"
@@ -68,7 +71,7 @@ class LevelsAdapter(private val levels: LevelModel) :
             holder.recyclerViewActivities.layoutManager = layoutManager
             val activitiesAdapter = ActivitiesAdapter(currentLevel?.activities)
             holder.recyclerViewActivities.adapter = activitiesAdapter
-        }else{
+        } else {
             holder.txtDescription.visibility = View.INVISIBLE
             holder.cardViewLevel.visibility = View.INVISIBLE
             holder.txtTitle.text = "Technique surprise"
