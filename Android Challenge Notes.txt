@@ -1,0 +1,16 @@
+Instructions to build
+
+1. Clone the repository
+2. Connect your android device or start your emulator
+3. Click the run button
+
+Architectural Decision
+
+1. I decided to use koin since it is lightweight. Making it suitable for smaller application like this android challenge.
+2. Additionally, I employ MVVM for the structure to separate the logic from the view.
+
+
+Improvements
+
+1. Implementation of fetching data from the API.
+2. Use of the latest technologies like android compose to build the UI
